@@ -364,7 +364,7 @@ fi
 # Deny ioi user from SSH login
 echo "DenyUsers ioi" >> /etc/ssh/sshd_config
 
-if [ -n "ANSIBLE_PASSWD" ]; then
+if [ -n "$ANSIBLE_PASSWD" ]; then
 	echo "Ansible user password set to: (from config)"
 else
 	ANSIBLE_PASSWD=$(openssl rand 8 | base32 | cut -c1-13)
