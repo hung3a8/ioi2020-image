@@ -93,6 +93,9 @@ mkdir /opt/ioi/store/screenshots
 mkdir /opt/ioi/store/submissions
 mkdir /opt/ioi/config/ssh
 
+# Update group and public permissions (only execute)
+chmod 711 /opt/ioi/bin/
+
 wget -O /tmp/cpptools-linux.vsix "https://github.com/microsoft/vscode-cpptools/releases/download/0.29.0/cpptools-linux.vsix"
 wget -O /tmp/vscode-java-pack.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-pack/0.9.1/vspackage"
 wget -O /tmp/cpp-compile-run.vsix.gz "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/danielpinto8zz6/vsextensions/c-cpp-compile-run/1.0.11/vspackage"
